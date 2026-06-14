@@ -8,12 +8,12 @@ The platform features separate interfaces for employees and vendors, enabling se
 
 ## ✨ Key Features
 
-- **📊 Bid Management** - Create, track, and manage comprehensive bids with detailed cost breakdowns
-- **👥 User Roles** - Separate portals for employees and vendors with role-based access control
-- **📁 Project Gallery** - Organized project documentation with file management capabilities
-- **💬 RFI & Submittals** - Request for Information and submittal tracking systems
-- **📈 Analytics & Reports** - Comprehensive reporting and financial analytics dashboard
-- **🔐 Secure Authentication** - JWT-based authentication with role-based access control
+- **Bid Management** - Create, track, and manage comprehensive bids with detailed cost breakdowns
+- **User Roles** - Separate portals for employees and vendors with role-based access control
+- **Project Gallery** - Organized project documentation with file management capabilities
+- **RFI & Submittals** - Request for Information and submittal tracking systems
+- **Analytics & Reports** - Comprehensive reporting and financial analytics dashboard
+- **Secure Authentication** - JWT-based authentication with role-based access control
 
 ---
 
@@ -342,6 +342,6 @@ For issues, questions, or suggestions, please:
 
 ---
 
-**Built with ❤️ using React, Node.js, and MySQL**
+**Built By Harshad with ❤️ using React, Node.js, and MySQL**
 
-*© 2024 SteelMart. All rights reserved.*
+*© 2026 SteelMart. All rights reserved.*
