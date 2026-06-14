@@ -15,5 +15,10 @@
 
 
 # Frontend ".env" content:
-APP_HOST='0.0.0.0'  
-VITE_API_URL = 'your_url'  
+- APP_HOST='0.0.0.0'  
+- VITE_API_URL = 'your_url'
+
+
+# How Run Application:
+- install necessary packages using "npm install" in both backend and frontend
+- npm "npm run dev" in main folder
