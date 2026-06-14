@@ -1,0 +1,278 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.modalContainer {
+  position: relative;
+  width: min(396px, calc(100vw - 20px));
+  height: 100%;
+  background: #FFFFFF;
+  box-shadow: -2px 0px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 0;
+  display: flex;
+  flex-direction: column;
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.modalContent {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+}
+
+.header {
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 19px;
+  border-bottom: 1px solid #EFF0F4;
+}
+
+.header h2 {
+  font-family: 'Inter';
+  font-size: 16px;
+  font-weight: 600;
+  color: #36373D;
+  margin: 0;
+}
+
+.closeBtn {
+  background: transparent;
+  border: none;
+  color: #36373D;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+}
+
+.editorContainer {
+  margin: 19px;
+  border: 1px solid #E7E7E8;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 219px;
+  max-height: calc(100vh - 180px);
+  overflow: hidden;
+}
+
+/* React Quill editor styles */
+.quillEditor {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.quillEditor :global(.ql-toolbar) {
+  border: none;
+  border-bottom: 1px solid #E7E7E8;
+  padding: 4px 8px;
+  background: #FAFAFA;
+  border-radius: 6px 6px 0 0;
+  flex-shrink: 0;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 0;
+}
+
+/* Each format group in one line */
+.quillEditor :global(.ql-toolbar) :global(.ql-formats) {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  margin-right: 0;
+  padding: 0 6px;
+  border-right: 1px solid #E7E7E8;
+  flex-shrink: 0;
+}
+
+.quillEditor :global(.ql-toolbar) :global(.ql-formats):last-child {
+  border-right: none;
+}
+
+.quillEditor :global(.ql-toolbar) button {
+  width: 24px;
+  height: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  padding: 2px;
+}
+
+.quillEditor :global(.ql-toolbar) button:hover {
+  background: #F2F4F7;
+}
+
+.quillEditor :global(.ql-toolbar) button:global(.ql-active) {
+  background: #E8E8FF;
+  color: #2324CA;
+}
+
+.quillEditor :global(.ql-toolbar) button:global(.ql-active) :global(.ql-stroke) {
+  stroke: #2324CA;
+}
+
+.quillEditor :global(.ql-toolbar) button:global(.ql-active) :global(.ql-fill) {
+  fill: #2324CA;
+}
+
+/* Header picker (Normal text dropdown) */
+.quillEditor :global(.ql-toolbar) :global(.ql-header.ql-picker) {
+  width: auto;
+  min-width: 80px;
+  max-width: 105px;
+}
+
+.quillEditor :global(.ql-toolbar) :global(.ql-picker-label) {
+  padding: 2px 18px 2px 4px;
+  border: none;
+  font-size: 13px;
+}
+
+/* Align picker */
+.quillEditor :global(.ql-toolbar) :global(.ql-align.ql-picker) {
+  width: auto;
+  min-width: 28px;
+}
+
+.quillEditor :global(.ql-toolbar) :global(.ql-align) :global(.ql-picker-label) {
+  padding: 2px 4px;
+  border: none;
+}
+
+.quillEditor :global(.ql-container) {
+  border: none;
+  flex: 1;
+  overflow-y: auto;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+}
+
+.quillEditor :global(.ql-editor) {
+  padding: 14px 13px;
+  line-height: 1.47;
+  color: #36373D;
+  min-height: 160px;
+}
+
+.quillEditor :global(.ql-editor) p {
+  margin-bottom: 8px;
+}
+
+.quillEditor :global(.ql-editor.ql-blank::before) {
+  font-style: normal;
+  color: #9DA4AE;
+  font-size: 14px;
+  left: 13px;
+  right: 13px;
+}
+
+.quillEditor :global(.ql-snow .ql-picker) {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  color: #1D2939;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 16px 19px;
+  display: flex;
+  justify-content: center;
+  gap: 13px;
+  background: #FFFFFF;
+}
+
+.cancelBtn, .saveBtn {
+  flex: 1;
+  height: 36px;
+  border-radius: 8px;
+  font-family: 'Inter';
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cancelBtn {
+  background: #FFFFFF;
+  border: 1px solid #2324CA;
+  color: #2324CA;
+}
+
+.saveBtn {
+  background: #2324CA;
+  border: 1px solid #2324CA;
+  color: #FFFFFF;
+}
+
+.emptyStateContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 12px;
+  text-align: center;
+  height: 100%;
+}
+
+.emptyStateContainer svg {
+  width: 120px;
+  height: 100px;
+  margin-bottom: 12px;
+}
+
+.addNotesBtn {
+  background: #2324CA;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.addNotesBtn:hover {
+  background: #1b1c9c;
+}
+
+.addNotesBtn:active {
+  transform: scale(0.98);
+}
+
+.emptyStateText {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: #475467;
+  margin: 0;
+  line-height: 1.5;
+}

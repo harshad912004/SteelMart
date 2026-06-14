@@ -1,0 +1,382 @@
+.pageWrapper {
+  padding: 32px 40px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.topHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.breadcrumb {
+  font-family: 'Inter';
+  font-size: 20px;
+  color: #1D2939;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.breadcrumbLink {
+  color: #1570EF;
+  cursor: pointer;
+}
+
+.notificationButton {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #E4E7EC;
+  background: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #475467;
+  font-size: 18px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.topSection {
+  background: transparent;
+}
+
+.profileCard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.profileHeader {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.profileAvatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #E4E7EC;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profileImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.blockedProfileAvatar {
+  filter: grayscale(100%) brightness(0.35);
+  background: #1F2937;
+}
+
+.profileHeader h1 {
+  font-family: 'Inter';
+  font-size: 24px;
+  font-weight: 600;
+  color: #1D2939;
+  margin: 0;
+}
+
+.profileHeader p {
+  font-family: 'Inter';
+  font-size: 14px;
+  color: #667085;
+  margin: 4px 0 0 0;
+}
+
+.profileActions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.iconButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #667085;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  border-radius: 4px;
+  transition: all 0.2s;
+  position: relative;
+}
+
+.iconButton:hover {
+  background: #F2F4F7;
+  color: #1D2939;
+}
+
+.iconDanger {
+  color: #D92D20;
+}
+
+.iconDanger:hover {
+  background: #FEE4E2;
+  color: #B42318;
+}
+
+.editButton {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: #FFFFFF;
+  color: #1570EF;
+  border: 1px solid #1570EF;
+  border-radius: 48px;
+  font-family: 'Inter';
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.editButton:hover {
+  background: #F5F8FF;
+}
+
+.infoSection {
+  background: #FFFFFF;
+  border: 1px solid #E4E7EC;
+  border-radius: 24px;
+  padding: 32px;
+}
+
+.infoGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px 24px;
+}
+
+.infoItem {
+  display: flex;
+  flex-direction: column;
+}
+
+.infoItem label {
+  font-family: 'Inter';
+  font-size: 12px;
+  font-weight: 500;
+  color: #667085;
+  margin-bottom: 8px;
+}
+
+.infoItem span {
+  font-family: 'Inter';
+  font-size: 15px;
+  color: #1D2939;
+  font-weight: 500;
+}
+
+.sectionTitle {
+  font-family: 'Inter';
+  font-size: 16px;
+  font-weight: 500;
+  color: #1D2939;
+  margin: 0 0 24px 0;
+}
+
+.detailsSection {
+  background: #FFFFFF;
+  border: 1px solid #E4E7EC;
+  border-radius: 24px;
+  padding: 32px;
+}
+
+.detailsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.detailsItem {
+  display: flex;
+  flex-direction: column;
+}
+
+.detailsItem label {
+  font-family: 'Inter';
+  font-size: 12px;
+  font-weight: 500;
+  color: #667085;
+  margin-bottom: 8px;
+}
+
+.detailsItem span {
+  font-family: 'Inter';
+  font-size: 15px;
+  color: #1D2939;
+  font-weight: 500;
+}
+
+.bidsSection {
+  background: #FFFFFF;
+  border: 1px solid #E4E7EC;
+  border-radius: 24px;
+  padding: 32px;
+}
+
+.bidsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.bidCard {
+  display: flex;
+  flex-direction: column;
+}
+
+.bidCard label {
+  font-family: 'Inter';
+  font-size: 12px;
+  font-weight: 500;
+  color: #667085;
+  margin-bottom: 8px;
+}
+
+.bidCard span {
+  font-family: 'Inter';
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.bidBlack {
+  color: #1D2939;
+}
+
+.bidRed {
+  color: #D92D20;
+}
+
+.bidGreen {
+  color: #027A48;
+}
+
+.bidBlue {
+  color: #1570EF;
+}
+
+.timesheetSection {
+  background: #FFFFFF;
+  border: 1px solid #E4E7EC;
+  border-radius: 24px;
+  padding: 32px;
+}
+
+.timesheetGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.timesheetItem {
+  display: flex;
+  flex-direction: column;
+}
+
+.timesheetItem label {
+  font-family: 'Inter';
+  font-size: 12px;
+  font-weight: 500;
+  color: #667085;
+  margin-bottom: 8px;
+}
+
+.timesheetItem span {
+  font-family: 'Inter';
+  font-size: 15px;
+  color: #1D2939;
+  font-weight: 500;
+}
+
+.downloadButton {
+  padding: 10px 24px;
+  background: #FFFFFF;
+  color: #1570EF;
+  border: 1px solid #1570EF;
+  border-radius: 48px;
+  font-family: 'Inter';
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.downloadButton:hover {
+  background: #F5F8FF;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.formGroup label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #344054;
+}
+
+.formGroup input,
+.formGroup select {
+  padding: 12px 16px;
+  border: 1px solid #D0D5DD;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #101828;
+  background: #FFFFFF;
+  font-family: 'Inter';
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.formGroup select {
+  cursor: pointer;
+}
+
+.updateButton {
+  padding: 12px 24px;
+  background: #1570EF;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 24px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  float: right;
+}
+
+.updateButton:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+}

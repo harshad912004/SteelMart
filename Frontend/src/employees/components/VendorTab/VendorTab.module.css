@@ -1,0 +1,168 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h2 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #101828;
+  margin: 0;
+}
+
+.tableContainer {
+  background: white;
+  border-radius: 8px;
+  border: 1px solid #EAECF0;
+  overflow: hidden;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th {
+  background: #F9FAFB;
+  padding: 12px 24px;
+  text-align: left;
+  font-size: 12px;
+  font-weight: 500;
+  color: #667085;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid #EAECF0;
+}
+
+.table td {
+  padding: 16px 24px;
+  font-size: 14px;
+  color: #344054;
+  border-bottom: 1px solid #EAECF0;
+  vertical-align: middle;
+}
+
+.table tr:last-child td {
+  border-bottom: none;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: 16px;
+  font-size: 12px;
+  font-weight: 500;
+  background: #F2F4F7;
+  color: #344054;
+}
+
+.badgeYellow {
+  background: #FEF0C7;
+  color: #B54708;
+}
+
+.badgeBlue {
+  background: #EFF8FF;
+  color: #175CD3;
+}
+
+.badgeGreen {
+  background: #ECFDF3;
+  color: #027A48;
+}
+
+.badgeRed {
+  background: #FEF3F2;
+  color: #B42318;
+}
+
+.badgeGray {
+  background: #F2F4F7;
+  color: #344054;
+}
+
+.actionButtons {
+  display: flex;
+  gap: 8px;
+}
+
+.approveBtn, .rejectBtn {
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  transition: opacity 0.2s;
+}
+
+.approveBtn:hover, .rejectBtn:hover {
+  opacity: 0.9;
+}
+
+.approveBtn {
+  background: #039855;
+  color: white;
+}
+
+.rejectBtn {
+  background: #D92D20;
+  color: white;
+}
+
+.docLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.docLink {
+  color: #1570EF;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.docLink:hover {
+  text-decoration: underline;
+}
+
+.error {
+  color: #D92D20;
+  background: #FEF3F2;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.completeBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 18px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  background: #039855;
+  color: white;
+  border: none;
+  transition: background 0.2s, opacity 0.2s;
+}
+
+.completeBtn:hover:not(:disabled) {
+  background: #027A48;
+}
+
+.completeBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

@@ -1,0 +1,1070 @@
+.pageWrapper {
+  min-height: 100%;
+  padding: 0 0 24px;
+  background:
+    radial-gradient(circle at top right, rgba(66, 99, 235, 0.08), transparent 24%),
+    linear-gradient(180deg, #ffffff 0%, #eef4fb 100%);
+}
+
+.tabRail {
+  display: flex;
+  gap: 6px;
+  padding: 0 28px;
+  border-bottom: 1px solid rgba(18, 37, 63, 0.08);
+  background: rgba(255, 255, 255, 0.92);
+  overflow-x: auto;
+  scrollbar-width: none;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  height: 62px;
+}
+
+.tabRail::-webkit-scrollbar {
+  display: none;
+}
+
+.tabButton {
+  position: relative;
+  border: none;
+  background: transparent;
+  color: #5b6474;
+  padding: 16px 18px 14px;
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: color 0.2s ease;
+}
+
+.tabButton::after {
+  content: '';
+  position: absolute;
+  left: 16px;
+  right: 16px;
+  bottom: 0;
+  height: 3px;
+  border-radius: 999px;
+  background: transparent;
+}
+
+.tabButton:hover {
+  color: #23324d;
+}
+
+.tabButtonActive {
+  color: #3047f7;
+}
+
+.tabButtonActive::after {
+  background: #3047f7;
+}
+
+.contentPanel {
+  padding: 18px 24px 0;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.filterWrap {
+  position: relative;
+  min-width: 128px;
+}
+
+.filterSelect {
+  width: 100%;
+  appearance: none;
+  border: 1px solid #dfe6f1;
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.04);
+  padding: 10px 38px 10px 14px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: #475467;
+  outline: none;
+  cursor: pointer;
+}
+
+.filterSelect:focus {
+  border-color: #3047f7;
+}
+
+.filterCaret {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #667085;
+  pointer-events: none;
+  display: inline-flex;
+}
+
+.downloadButton {
+  border: none;
+  border-radius: 10px;
+  background: #2f43e8;
+  color: #ffffff;
+  padding: 10px 18px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 12px 24px rgba(47, 67, 232, 0.18);
+}
+
+.downloadButton svg {
+  width: 18px;
+  height: 18px;
+}
+
+.metricsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+.companySection {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+.companyMain {
+  display: grid;
+  gap: 18px;
+}
+
+.companyHeroGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.companyHeroCard,
+.companyStatusCard,
+.companyBoardCard,
+.noResponseCard,
+.clientListCard {
+  background: rgba(255, 255, 255, 0.98);
+  border: 1px solid #e7edf6;
+  border-radius: 14px;
+  box-shadow: 0 16px 36px rgba(15, 23, 42, 0.05);
+}
+
+.companyHeroCard {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 18px;
+}
+
+.companyHeroCopy {
+  display: grid;
+  gap: 6px;
+}
+
+.companyHeroLabel {
+  color: #4b5565;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.companyHeroValue {
+  color: #3a4150;
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.companyHeroMeta {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.companyHeroMetaPositive {
+  color: #33a047;
+}
+
+.companyHeroMetaNegative {
+  color: #ef4d5b;
+}
+
+.companyStatusCard {
+  display: grid;
+  grid-template-columns: 1fr 1px 1fr;
+  align-items: stretch;
+}
+
+.companyStatusPane {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 16px 12px;
+  text-align: center;
+}
+
+.companyStatusDivider {
+  background: #edf1f7;
+}
+
+.companyStatusLabel {
+  color: #8b90a0;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.companyStatusValue {
+  color: #3a4150;
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.companyStatusIconPlain .metricIcon {
+  background: transparent;
+}
+
+.companyBoardCard {
+  padding: 14px;
+}
+
+.companyBoardToolbar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.companyBoardToggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.companyToggleLabel,
+.companyToggleLabelActive {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.companyToggleLabel {
+  color: #98a2b3;
+}
+
+.companyToggleLabelActive {
+  color: #3a4150;
+}
+
+.companyToggleSwitch {
+  width: 38px;
+  height: 22px;
+  border: none;
+  border-radius: 999px;
+  background: #3047f7;
+  padding: 3px;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  transition: justify-content 0.2s ease;
+}
+
+.companyToggleSwitchActive {
+  justify-content: flex-end;
+}
+
+.companyToggleKnob {
+  width: 16px;
+  height: 16px;
+  border-radius: 999px;
+  background: #ffffff;
+  box-shadow: 0 2px 4px rgba(15, 23, 42, 0.18);
+}
+
+.companyBoardContent {
+  display: grid;
+  gap: 18px;
+}
+
+.companyBoardRowThree,
+.companyBoardRowTwo {
+  display: grid;
+  gap: 18px;
+}
+
+.companyBoardRowThree {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.companyBoardRowTwo {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.companyInsightCard {
+  border: 1px solid #e7edf6;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.04);
+  padding: 14px 16px;
+  display: grid;
+  gap: 8px;
+  justify-items: center;
+  text-align: center;
+}
+
+.companyInsightLabel {
+  color: #4b5565;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.companyInsightValue {
+  color: #3a4150;
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.companyInsightMeta {
+  color: #98a2b3;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.companySidePanel {
+  display: grid;
+  gap: 18px;
+}
+
+.noResponseCard {
+  padding: 18px;
+}
+
+.noResponseTitle {
+  color: #4b5565;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.noResponseCount {
+  color: #3a4150;
+  font-family: 'Inter', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 8px;
+}
+
+.noResponseDetail {
+  color: #667085;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.clientListCard {
+  padding: 18px;
+}
+
+.panelTitle {
+  color: #344054;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.clientList {
+  display: grid;
+  gap: 0;
+  max-height: 340px;
+  overflow-y: auto;
+}
+
+.clientListItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid #eef2f7;
+}
+
+.clientListItem:last-child {
+  border-bottom: none;
+}
+
+.clientAvatar {
+  width: 38px;
+  height: 38px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: #e4e8f3;
+  color: #1f2937;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.clientInfo {
+  display: grid;
+  gap: 2px;
+}
+
+.clientName {
+  color: #101828;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.clientMeta {
+  color: #667085;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.metricCard,
+.splitMetricCard {
+  background: rgba(255, 255, 255, 0.98);
+  border: 1px solid #e7edf6;
+  border-radius: 14px;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
+}
+
+.metricCard {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 18px 18px 16px;
+}
+
+.metricCopy {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.metricLabel {
+  color: #4b5565;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+}
+
+.metricValue {
+  color: #3a4150;
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.metricDelta {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.metricDeltaPositive {
+  color: #33a047;
+}
+
+.metricDeltaNegative {
+  color: #ef4d5b;
+}
+
+.metricIcon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.iconToneGreen {
+  color: #45bf65;
+  background: #ecfaf0;
+}
+
+.iconToneRed {
+  color: #ff4e5e;
+  background: #fff1f0;
+}
+
+.iconToneGray {
+  color: #9197a6;
+  background: #f6f7fb;
+}
+
+.splitMetricCard {
+  display: grid;
+  grid-template-columns: 1fr 1px 1fr;
+  align-items: stretch;
+  padding: 10px 0;
+}
+
+.splitMetricPane {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 10px 12px;
+  text-align: center;
+}
+
+.splitMetricDivider {
+  width: 1px;
+  background: #edf1f7;
+}
+
+.splitMetricLabel {
+  color: #8b90a0;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.splitMetricValue {
+  color: #3a4150;
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.tableCard {
+  background: rgba(255, 255, 255, 0.98);
+  border: 1px solid #e7edf6;
+  border-radius: 14px;
+  box-shadow: 0 16px 36px rgba(15, 23, 42, 0.05);
+  overflow: hidden;
+}
+
+.tableScroll {
+  overflow-x: auto;
+}
+
+.reportTable {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 860px;
+}
+
+.reportTable thead tr {
+  background: linear-gradient(180deg, #fbfcff 0%, #f5f7fb 100%);
+}
+
+.reportTable th {
+  padding: 18px 14px;
+  border-bottom: 1px solid #e7edf6;
+  text-align: left;
+  color: #4a5261;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.reportTable td {
+  padding: 16px 14px;
+  border-bottom: 1px solid #eef2f7;
+  color: #4c5565;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  vertical-align: middle;
+}
+
+.reportTable tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.nameCell {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.primaryText {
+  color: #3a4150;
+  font-weight: 700;
+}
+
+.secondaryText {
+  color: #98a2b3;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.statusBadge {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 6px 10px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.statusSuccess {
+  color: #167c3f;
+  background: #e8f9ed;
+}
+
+.statusDanger {
+  color: #d23d48;
+  background: #fff0f1;
+}
+
+.statusNeutral {
+  color: #556070;
+  background: #f4f6fb;
+}
+
+.emptyState {
+  padding: 32px 18px !important;
+  text-align: center;
+  color: #98a2b3 !important;
+  font-weight: 600;
+}
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-top: 16px;
+  padding: 16px 18px;
+  border: 1px solid #e7edf6;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.04);
+}
+
+.paginationInfo {
+  color: #7b8494;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.paginationButtons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.pageButton,
+.pageNumber,
+.pageNumberInactive {
+  min-width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.pageButton {
+  border: none;
+  background: #eef3fb;
+  color: #5f6b7d;
+  cursor: pointer;
+}
+
+.pageButton:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.pageNumber {
+  background: #2f43e8;
+  color: #ffffff;
+}
+
+.pageNumberInactive {
+  background: transparent;
+  color: #7b8494;
+}
+
+@media (max-width: 1120px) {
+
+  .metricsGrid,
+  .companyHeroGrid,
+  .companyBoardRowThree,
+  .companyBoardRowTwo {
+    grid-template-columns: 1fr;
+  }
+
+  .companySection {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .pageWrapper {
+    padding-bottom: 16px;
+  }
+
+  .tabRail {
+    padding: 0 16px;
+  }
+
+  .contentPanel {
+    padding: 16px 14px 0;
+  }
+
+  .toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .filterWrap,
+  .downloadButton {
+    width: 100%;
+  }
+
+  .downloadButton {
+    justify-content: center;
+  }
+
+  .metricCard {
+    padding: 16px;
+  }
+
+  .metricValue {
+    font-size: 18px;
+  }
+
+  .companyHeroCard {
+    padding: 16px;
+  }
+
+  .splitMetricCard {
+    grid-template-columns: 1fr;
+    padding: 0;
+  }
+
+  .splitMetricDivider {
+    display: none;
+  }
+
+  .reportTable {
+    min-width: 720px;
+  }
+
+  .pagination {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .companyBoardToolbar {
+    justify-content: center;
+  }
+
+  .companyBoardToggle {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+/* ════════════════════════════════════════
+   Customers Tab — new components
+   ════════════════════════════════════════ */
+
+.metricsGridFour {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+/* Individual centred "count" card (Converted / Total Customers) */
+.customerCountCard {
+  background: rgba(255, 255, 255, 0.98);
+  border: 1px solid #e7edf6;
+  border-radius: 14px;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 18px 12px;
+  text-align: center;
+}
+
+.customerCountLabel {
+  color: #8b90a0;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.customerCountValue {
+  color: #3a4150;
+  font-family: 'Inter', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+/* Two-column mid section: leaderboard | chart */
+.customerMidSection {
+  display: grid;
+  grid-template-columns: 240px minmax(0, 1fr);
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+/* ── Customer Leaderboard ── */
+.leaderboardCard {
+  background: rgba(255, 255, 255, 0.98);
+  border: 1px solid #e7edf6;
+  border-radius: 14px;
+  box-shadow: 0 16px 36px rgba(15, 23, 42, 0.05);
+  padding: 18px;
+}
+
+.leaderboardTitle {
+  color: #344054;
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.leaderboardList {
+  display: flex;
+  flex-direction: column;
+}
+
+.leaderboardItem {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 11px 0;
+  border-bottom: 1px solid #eef2f7;
+}
+
+.leaderboardItem:last-child {
+  border-bottom: none;
+}
+
+.leaderboardItemName {
+  color: #101828;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.leaderboardItemMeta {
+  color: #667085;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.leaderboardWinRatio {
+  color: #24f120;
+  font-weight: 700;
+}
+
+/* ── Win Ratio Bar Chart ── */
+.winRatioChartCard {
+  background: rgba(255, 255, 255, 0.98);
+  border: 1px solid #e7edf6;
+  border-radius: 14px;
+  box-shadow: 0 16px 36px rgba(15, 23, 42, 0.05);
+  padding: 18px;
+}
+
+.winRatioChartHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.winRatioChartTitle {
+  color: #344054;
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.winRatioLegend {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.winRatioLegendItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #667085;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.winRatioLegendDotGreen {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #45B36A;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.winRatioLegendDotRed {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #FF5C5C;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+/* ── Customer Table ── */
+.customerTable {
+  min-width: 1020px;
+}
+
+.sortableHeader {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  white-space: nowrap;
+}
+
+.sortIcon {
+  color: #b0b8c8;
+  font-size: 11px;
+  font-weight: 400;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1200px) {
+  .metricsGridFour {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .customerMidSection {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .metricsGridFour {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ════════════════════════════════════════
+   Estimate Ledger Tab — new components
+   ════════════════════════════════════════ */
+
+.projectNameCell {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.ledgerStatusBadge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  padding: 4px 12px;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+  text-transform: capitalize;
+}
+
+.ledgerStatusWon {
+  border: 1.5px solid #45B36A;
+  color: #45B36A;
+  background: transparent;
+}
+
+.ledgerStatusLost {
+  border: 1.5px solid #FF5C5C;
+  color: #FF5C5C;
+  background: transparent;
+}
+
+.ledgerStatusOther {
+  border: 1.5px solid #98a2b3;
+  color: #98a2b3;
+  background: transparent;
+}
+
+.actionBtnGroup {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.actionBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  border: 1px solid #e4e7ec;
+  background: #ffffff;
+  color: #475467;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  padding: 0;
+}
+
+.actionBtn:hover {
+  background: #f9fafb;
+  border-color: #d0d5dd;
+  color: #1d2939;
+}

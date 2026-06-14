@@ -1,0 +1,129 @@
+.tableRef {
+  width: 100%;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table thead {
+  background: #F9FAFB;
+  border-bottom: 1px solid #E4E7EC;
+  border-radius: 8px 8px 0 0;
+}
+
+.table thead th {
+  padding: 16px 24px;
+  text-align: left;
+  font-family: 'Inter';
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #475467;
+}
+
+.table tbody tr {
+  border-bottom: 1px solid #E4E7EC;
+  transition: background-color 0.2s;
+  cursor: pointer;
+}
+
+.table tbody tr:hover {
+  background-color: #F9FAFB;
+}
+
+.table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.table tbody td {
+  padding: 16px 24px;
+  font-family: 'Inter';
+  font-size: 13px;
+  color: #667085;
+}
+
+.emptyState {
+  text-align: center;
+  height: 120px;
+  color: #98A2B3;
+}
+
+.nameCell {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.websiteCell {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+
+.avatarWrapper {
+  position: relative;
+  width: 40px;
+  height: 40px;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: #E4E7EC;
+}
+
+.onlineDot {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 10px;
+  height: 10px;
+  background-color: #12B76A;
+  border: 2px solid #FFFFFF;
+  border-radius: 50%;
+}
+
+.employeeName {
+  font-weight: 500;
+  color: #1D2939;
+  font-size: 14px;
+}
+
+.employeeEmail {
+  font-size: 13px;
+  color: #98A2B3;
+  margin-top: 2px;
+}
+
+.bidCount {
+  font-weight: 500;
+}
+
+.bidRed {
+  color: #D92D20;
+}
+
+.bidGreen {
+  color: #027A48;
+}
+
+.actionButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+}
+
+.actionButton:hover {
+  background-color: #F2F4F7;
+}

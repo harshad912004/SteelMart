@@ -1,0 +1,130 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px 24px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.fullWidth {
+  grid-column: 1 / -1;
+}
+
+.field label {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #344054;
+}
+
+.field input,
+.field select {
+  width: 100%;
+  min-height: 44px;
+  padding: 11px 14px;
+  border: 1px solid #d0d5dd;
+  border-radius: 10px;
+  background: #ffffff;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: #101828;
+  box-sizing: border-box;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.field input::placeholder,
+.field select {
+  color: #98a2b3;
+}
+
+.field input:focus,
+.field select:focus {
+  border-color: #84caff;
+  box-shadow: 0 0 0 4px #eff8ff;
+}
+
+.radioGroup {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  min-height: 44px;
+}
+
+.radioOption {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  color: #344054;
+}
+
+.radioOption input {
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  accent-color: #3b36d0;
+}
+
+.error {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  color: #d92d20;
+}
+
+.submitError {
+  margin-top: -10px;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  color: #d92d20;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+}
+
+.submitButton {
+  min-width: 186px;
+  min-height: 46px;
+  padding: 0 24px;
+  border: none;
+  border-radius: 10px;
+  background: #2f2dcf;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, opacity 0.2s ease;
+}
+
+.submitButton:hover:not(:disabled) {
+  background: #2725b8;
+}
+
+.submitButton:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+@media (max-width: 640px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .fullWidth {
+    grid-column: auto;
+  }
+}

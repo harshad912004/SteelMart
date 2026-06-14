@@ -1,0 +1,188 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 200px;
+}
+
+.loadingState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  padding: 40px 0;
+  gap: 16px;
+}
+
+.spinner {
+  width: 36px;
+  height: 36px;
+  border: 3px solid #f2f4f7;
+  border-top: 3px solid #2f2dcf;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loadingState p {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: #667085;
+  margin: 0;
+}
+
+.errorState {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  padding: 40px 0;
+}
+
+.errorState p {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: #d92d20;
+  text-align: center;
+  margin: 0;
+}
+
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  padding: 48px 16px;
+  text-align: center;
+}
+
+.emptyIcon {
+  color: #98a2b3;
+  margin-bottom: 16px;
+}
+
+.emptyState h3 {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #101828;
+  margin: 0 0 8px 0;
+}
+
+.emptyState p {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: #667085;
+  margin: 0;
+  max-width: 320px;
+}
+
+.listContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.instruction {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: #475467;
+  margin: 0;
+}
+
+.projectList {
+  display: flex;
+  flex-direction: column;
+  max-height: 360px;
+  overflow-y: auto;
+  border: 1px solid #eaecf0;
+  border-radius: 8px;
+}
+
+/* Custom Scrollbar for Project List */
+.projectList::-webkit-scrollbar {
+  width: 6px;
+}
+
+.projectList::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.projectList::-webkit-scrollbar-thumb {
+  background: #d0d5dd;
+  border-radius: 3px;
+}
+
+.projectList::-webkit-scrollbar-thumb:hover {
+  background: #98a2b3;
+}
+
+.projectRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px;
+  border-bottom: 1px solid #eaecf0;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.projectRow:last-child {
+  border-bottom: none;
+}
+
+.projectRow:hover {
+  background-color: #f9fafb;
+}
+
+.projectInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.projectId {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  color: #2f2dcf;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.projectName {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #101828;
+}
+
+.selectBtn {
+  padding: 8px 14px;
+  border: 1px solid #d0d5dd;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #344054;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.selectBtn:hover {
+  background: #f9fafb;
+  color: #1d2939;
+  border-color: #b2ddff;
+}
+
+.projectRow:hover .selectBtn {
+  background: #2f2dcf;
+  color: #ffffff;
+  border-color: #2f2dcf;
+}

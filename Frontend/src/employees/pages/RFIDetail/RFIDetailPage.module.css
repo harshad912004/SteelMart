@@ -1,0 +1,290 @@
+.pageWrapper {
+  font-family: 'Inter', sans-serif;
+  padding: 0 32px 32px;
+}
+
+/* ── Back button ── */
+.backButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: #475467;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px 0;
+  margin-top: 16px;
+  margin-bottom: 8px;
+  transition: color 0.2s;
+}
+
+.backButton:hover {
+  color: #2324CA;
+}
+
+.backButton svg {
+  flex-shrink: 0;
+}
+
+/* ── RFI Header ── */
+.rfiHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-top: 24px;
+  margin-bottom: 8px;
+}
+
+.rfiTitleRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.rfiTitle {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  color: #1D2939;
+  margin: 0;
+}
+
+.eyeButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  color: #98A2B3;
+  transition: color 0.2s;
+}
+
+.eyeButton:hover {
+  color: #667085;
+}
+
+.rfiSubtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: #667085;
+  margin: 2px 0 0;
+}
+
+.headerActions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.statusBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+  color: #027A48;
+  background: #ffffff;
+  border: 1px solid #027A48;
+  border-radius: 16px;
+  padding: 4px 12px;
+  cursor: pointer;
+}
+
+.statusArrow {
+  display: inline-flex;
+  align-items: center;
+  color: #027A48;
+}
+
+.trashButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  color: #D92D20;
+  transition: color 0.2s;
+}
+
+.trashButton:hover {
+  color: #b42318;
+}
+
+/* ── Description ── */
+.rfiDescription {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  line-height: 1.65;
+  color: #475467;
+  margin: 16px 0 24px;
+}
+
+/* ── RFI History Section ── */
+.historySection {
+  background: #ffffff;
+  border: 1px solid #EAECF0;
+  border-radius: 8px;
+  box-shadow: 0px 1px 3px rgba(16, 24, 40, 0.1);
+  padding: 24px;
+}
+
+.historyHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.historyTitle {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  color: #1D2939;
+  margin: 0;
+}
+
+.historyHeaderRight {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.courtInfo {
+  text-align: right;
+}
+
+.courtCompany {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: #1D2939;
+  display: block;
+}
+
+.courtLabel {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  color: #98A2B3;
+  margin-top: 2px;
+}
+
+.addNewButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+  color: #ffffff;
+  background: #2324CA;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background 0.2s;
+  white-space: nowrap;
+}
+
+.addNewButton:hover {
+  background: #2538d4;
+}
+
+/* ── History Entry Cards ── */
+.historyEntries {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.historyCard {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  background: #ffffff;
+  border: 1px solid #EAECF0;
+  border-radius: 8px;
+  padding: 20px 24px;
+}
+
+.historyCardLeft {
+  flex: 1;
+  min-width: 0;
+}
+
+.personRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.onlineDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #12B76A;
+  flex-shrink: 0;
+}
+
+.offlineDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #98A2B3;
+  flex-shrink: 0;
+}
+
+.personName {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: #1D2939;
+}
+
+.personCompany {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  color: #98A2B3;
+  margin-left: 18px;
+  margin-bottom: 8px;
+}
+
+.historyMessage {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #475467;
+  margin: 8px 0 8px;
+}
+
+.historyTimestamp {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  color: #98A2B3;
+}
+
+.historyCardRight {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+  flex-shrink: 0;
+  align-self: center;
+}
+
+.pdfIcon {
+  width: 48px;
+  height: 56px;
+  border: 1px solid #E7E7E8;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  cursor: pointer;
+}

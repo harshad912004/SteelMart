@@ -1,0 +1,171 @@
+.tableRef {
+  width: 100%;
+  border: 1px solid #e7edf6;
+  border-radius: 16px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 16px 36px rgba(15, 23, 42, 0.05);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table thead {
+  background: linear-gradient(180deg, #fbfcff 0%, #f5f7fb 100%);
+  border-bottom: 1px solid #e7edf6;
+}
+
+.table thead th {
+  padding: 18px 24px;
+  text-align: left;
+  font-family: 'Inter';
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #4a5261;
+}
+
+.table tbody tr {
+  border-bottom: 1px solid #eef2f7;
+  transition: background-color 0.2s;
+  cursor: pointer;
+}
+
+.table tbody tr:hover {
+  background-color: #f8fafd;
+}
+
+.table tbody tr.blockedRow {
+  background-color: #ffffff;
+}
+
+.table tbody tr.blockedRow:hover {
+  background-color: #f6f8fb;
+}
+
+.table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.table tbody td {
+  padding: 16px 24px;
+  font-family: 'Inter';
+  font-size: 13px;
+  color: #5c6677;
+  vertical-align: middle;
+}
+
+.emptyState {
+  text-align: center;
+  height: 120px;
+  color: #98A2B3;
+  font-weight: 600;
+}
+
+.nameCell {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.avatarWrapper {
+  position: relative;
+  width: 42px;
+  height: 42px;
+}
+
+.avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #e8edf8;
+}
+
+.onlineDot {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 10px;
+  height: 10px;
+  background-color: #12B76A;
+  border: 2px solid #FFFFFF;
+  border-radius: 50%;
+}
+
+.employeeName {
+  font-weight: 600;
+  color: #1d2939;
+  font-size: 14px;
+}
+
+.employeeEmail {
+  font-size: 12px;
+  color: #98a2b3;
+  margin-top: 3px;
+}
+
+.blockedRow td,
+.blockedRow .employeeEmail {
+  color: #525252;
+}
+
+.blockedRow .employeeName {
+  color: #111111;
+}
+
+.bidCount {
+  font-weight: 700;
+}
+
+.bidRed {
+  color: #D92D20;
+}
+
+.bidGreen {
+  color: #027A48;
+}
+
+.blockedAvatar {
+  filter: grayscale(1);
+}
+
+.blockedDot {
+  background-color: #111111;
+}
+
+.blockedBidCount {
+  color: #111111;
+}
+
+.actionButton {
+  background: #eef3fb;
+  border: 1px solid transparent;
+  cursor: pointer;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  color: #5f6b7d;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.actionButton:hover {
+  background-color: #e5ecf8;
+  border-color: #dce4f0;
+  color: #23324d;
+}
+
+@media (max-width: 768px) {
+  .tableRef {
+    overflow-x: auto;
+  }
+
+  .table {
+    min-width: 760px;
+  }
+}

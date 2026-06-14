@@ -1,0 +1,772 @@
+.modalContent {
+  padding: 16px 24px 24px;
+}
+
+.sectionTitle {
+  font-family: 'Inter';
+  font-size: 18px;
+  font-weight: 500;
+  color: #1C33BB;
+  margin: 24px 0 16px;
+}
+
+.sectionTitle:first-child {
+  margin-top: 0;
+}
+
+.formGrid2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.toggleFormGroup {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.toggleFormGroup label {
+  margin: 0;
+  flex: 0 0 auto;
+}
+
+.fullWidth {
+  grid-column: 1 / -1;
+}
+
+.formGroup label {
+  font-family: 'Inter';
+  font-size: 14px;
+  font-weight: 500;
+  color: #1D2939;
+}
+
+.formGroup input[type="text"],
+.formGroup input[type="date"],
+.formGroup input[type="number"] {
+  padding: 10px 14px;
+  border: 1px solid #E4E7EC;
+  border-radius: 8px;
+  font-family: 'Inter';
+  font-size: 14px;
+  color: #1D2939;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.formGroup input::placeholder {
+  color: #98A2B3;
+}
+
+.errorMessage {
+  color: #D92D20;
+  font-family: 'Inter';
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.formErrorSummary {
+  margin-top: 18px;
+  color: #D92D20;
+  font-family: 'Inter';
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.5;
+  white-space: pre-line;
+  text-align: center;
+}
+
+.searchBox {
+  position: relative;
+  margin-bottom: 12px;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.searchBox input {
+  padding-left: 36px !important;
+}
+
+.listContainer {
+  border: 1px solid #E4E7EC;
+  border-radius: 8px;
+  max-height: 160px;
+  overflow-y: auto;
+  margin-bottom: 12px;
+}
+
+.listItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-bottom: 1px solid #E4E7EC;
+  font-family: 'Inter';
+  font-size: 13px;
+  color: #475467;
+  cursor: pointer;
+}
+
+.listItem:last-child {
+  border-bottom: none;
+}
+
+.contractorInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.employeeOptionInfo {
+  display: flex;
+  align-items: baseline;
+  min-width: 0;
+  flex-wrap: wrap;
+}
+
+.employeeOptionInfo .strongText::after {
+  content: "|";
+  margin-left: 8px;
+  color: #98A2B3;
+  font-weight: 400;
+}
+
+.contractorMeta {
+  font-size: 12px;
+  color: #98A2B3;
+}
+
+.emptyList {
+  padding: 14px 12px;
+  color: #667085;
+  font-family: 'Inter';
+  font-size: 13px;
+}
+
+.strongText {
+  font-weight: 500;
+  color: #1D2939;
+}
+
+.outlineButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  background: #FFFFFF;
+  border: 1px solid #1C33BB;
+  border-radius: 6px;
+  color: #1C33BB;
+  font-family: 'Inter';
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  align-self: flex-start;
+}
+
+.selectedEmployeesBox {
+  border: 1px solid #E4E7EC;
+  border-radius: 12px;
+  padding: 14px;
+  min-height: 220px;
+  max-height: 280px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.employeeGroup {
+  border: 1px solid #E4E7EC;
+  border-radius: 12px;
+  padding: 12px;
+  background: #FFFFFF;
+}
+
+.employeeGroupHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.employeeGroupTitle {
+  font-family: 'Inter';
+  font-size: 14px;
+  font-weight: 600;
+  color: #1D2939;
+}
+
+.addEmployeeLink {
+  background: none;
+  border: none;
+  color: #1C33BB;
+  cursor: pointer;
+  font-family: 'Inter';
+  font-size: 13px;
+  font-weight: 600;
+  padding: 0;
+}
+
+.selectedRow {
+  padding: 10px 0;
+  border-bottom: 1px solid #E4E7EC;
+  font-family: 'Inter';
+  font-size: 14px;
+  color: #475467;
+}
+
+.selectedRow:last-child {
+  border-bottom: none;
+}
+
+.selectedRowTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Inter';
+  font-size: 14px;
+  font-weight: 500;
+  color: #1D2939;
+  margin-bottom: 8px;
+}
+
+.addEmployeeText {
+  color: #1C33BB;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.selectedRow {
+  padding: 8px 0;
+  border-bottom: 1px solid #E4E7EC;
+  font-family: 'Inter';
+  font-size: 13px;
+  color: #475467;
+}
+
+.selectedRow:last-child {
+  border-bottom: none;
+}
+
+.currencyLabel {
+  font-size: 12px;
+  color: #667085;
+  font-weight: 400;
+}
+
+.inputWithSymbol {
+  position: relative;
+}
+
+.inputWithSymbol input {
+  padding-right: 36px !important;
+}
+
+.symbol {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #98A2B3;
+  font-size: 16px;
+}
+
+.toggleWrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #FFFFFF;
+  padding: 8px 0;
+}
+
+.toggleLabel {
+  font-family: 'Inter';
+  font-size: 14px;
+  font-weight: 500;
+  min-width: 24px;
+}
+
+.toggleSwitch {
+  width: 44px;
+  height: 24px;
+  background-color: #E4E7EC;
+  border-radius: 12px;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.toggleOn {
+  background-color: #1C33BB;
+}
+
+.toggleThumb {
+  width: 20px;
+  height: 20px;
+  background-color: #FFFFFF;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  transition: transform 0.2s;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.toggleOn .toggleThumb {
+  transform: translateX(20px);
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.cancelButton {
+  padding: 10px 40px;
+  background: #FFFFFF;
+  border: 1px solid #1C33BB;
+  border-radius: 8px;
+  color: #1C33BB;
+  font-family: 'Inter';
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .formGrid2 {
+    grid-template-columns: 1fr;
+  }
+
+  .toggleFormGroup {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .searchBox,
+  .selectedEmployeesBox {
+    width: 100%;
+  }
+
+  .selectedEmployeesBox {
+    min-height: 120px;
+    height: auto;
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .cancelButton,
+  .submitButton,
+  .outlineButton {
+    width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .sectionTitle {
+    font-size: 16px;
+  }
+
+  .inputWithSymbol input {
+    padding-right: 32px !important;
+  }
+
+  .symbol {
+    right: 10px;
+  }
+}
+
+.submitButton {
+  padding: 10px 40px;
+  background: #1C33BB;
+  border: none;
+  border-radius: 8px;
+  color: #FFFFFF;
+  font-family: 'Inter';
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.shareOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(16, 24, 40, 0.32);
+}
+
+.sharePopup {
+  width: min(474px, calc(100vw - 32px));
+  min-height: 456px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 22px 18px;
+  background: #FFFFFF;
+  border-radius: 20px;
+  box-shadow: 0 18px 40px rgba(16, 24, 40, 0.18);
+  box-sizing: border-box;
+}
+
+.shareHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.shareHeader h3 {
+  margin: 0;
+  font-family: 'Inter';
+  font-size: 20px;
+  font-weight: 600;
+  color: #344054;
+}
+
+.shareCloseButton {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: transparent;
+  color: #1D2939;
+  font-size: 30px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.shareLabel {
+  margin-bottom: 6px;
+  font-family: 'Inter';
+  font-size: 14px;
+  font-weight: 500;
+  color: #344054;
+}
+
+.shareSearchBox {
+  height: 38px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 12px;
+  border: 1px solid #E4E7EC;
+  border-bottom: none;
+  border-radius: 6px 6px 0 0;
+  color: #98A2B3;
+  box-sizing: border-box;
+}
+
+.shareSearchBox input {
+  width: 100%;
+  min-width: 0;
+  border: none;
+  outline: none;
+  font-family: 'Inter';
+  font-size: 14px;
+  color: #1D2939;
+}
+
+.shareSearchBox input::placeholder {
+  color: #98A2B3;
+}
+
+.shareOptionList {
+  max-height: 190px;
+  overflow-y: auto;
+  border: 1px solid #E4E7EC;
+  border-radius: 0 0 6px 6px;
+}
+
+.shareOptionRow {
+  min-height: 38px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-bottom: 1px solid #E4E7EC;
+  font-family: 'Inter';
+  font-size: 14px;
+  font-weight: 500;
+  color: #344054;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.shareOptionRow:last-child {
+  border-bottom: none;
+}
+
+.shareOptionRow input {
+  width: 16px;
+  height: 16px;
+  accent-color: #3447FF;
+  cursor: pointer;
+}
+
+.shareEmptyState {
+  padding: 14px 12px;
+  font-family: 'Inter';
+  font-size: 14px;
+  color: #667085;
+}
+
+.shareActions {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-top: auto;
+  padding-top: 30px;
+}
+
+.shareCancelButton,
+.shareSendButton {
+  width: 171px;
+  height: 40px;
+  border-radius: 6px;
+  font-family: 'Inter';
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.shareCancelButton {
+  background: #FFFFFF;
+  border: 1px solid #3447FF;
+  color: #1C33BB;
+}
+
+.shareSendButton {
+  background: #2E2BD1;
+  border: 1px solid #2E2BD1;
+  color: #FFFFFF;
+}
+
+.shareSendButton:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+/* ── Select Internal Team ── */
+.internalTeamSection {
+  margin-top: 8px;
+}
+
+.internalTeamHint {
+  font-family: 'Inter';
+  font-size: 13px;
+  color: #667085;
+  margin: 0 0 14px;
+}
+
+.vendorTagFilters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.vendorTagPill {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 16px;
+  border-radius: 20px;
+  border: 1.5px solid #D0D5DD;
+  background: #FFFFFF;
+  font-family: 'Inter';
+  font-size: 13px;
+  font-weight: 500;
+  color: #344054;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+  user-select: none;
+}
+
+.vendorTagPill:hover {
+  border-color: #1C33BB;
+  color: #1C33BB;
+  background: #EEF2FF;
+}
+
+.vendorTagPillActive {
+  background: #1C33BB;
+  border-color: #1C33BB;
+  color: #FFFFFF;
+}
+
+.vendorTagPillActive:hover {
+  background: #1428A0;
+  border-color: #1428A0;
+  color: #FFFFFF;
+}
+
+.vendorEmployeeList {
+  border: 1px solid #E4E7EC;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 12px;
+  max-height: 260px;
+  overflow-y: auto;
+}
+
+.vendorListLoading,
+.vendorListEmpty {
+  padding: 18px 16px;
+  font-family: 'Inter';
+  font-size: 13px;
+  color: #667085;
+  text-align: center;
+}
+
+.vendorGroup {
+  border-bottom: 1px solid #F2F4F7;
+}
+
+.vendorGroup:last-child {
+  border-bottom: none;
+}
+
+.vendorGroupName {
+  padding: 10px 14px 6px;
+  font-family: 'Inter';
+  font-size: 12px;
+  font-weight: 700;
+  color: #1C33BB;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  background: #F9FAFB;
+}
+
+.vendorGroupEmployees {
+  padding: 4px 0;
+}
+
+.vendorEmployeeItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 14px;
+  cursor: pointer;
+  transition: background 0.1s ease;
+}
+
+.vendorEmployeeItem:hover {
+  background: #F9FAFB;
+}
+
+.vendorEmployeeItem input[type="checkbox"] {
+  width: 15px;
+  height: 15px;
+  accent-color: #1C33BB;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.vendorEmployeeInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.vendorEmployeeName {
+  font-family: 'Inter';
+  font-size: 13px;
+  font-weight: 500;
+  color: #1D2939;
+}
+
+.vendorEmployeeMeta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'Inter';
+  font-size: 12px;
+  color: #98A2B3;
+}
+
+.vendorEmployeeTag {
+  display: inline-flex;
+  align-items: center;
+  padding: 1px 8px;
+  background: #EEF2FF;
+  border-radius: 10px;
+  color: #1C33BB;
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+/* Selected vendor chips row */
+.selectedVendorChips {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.selectedVendorChipsLabel {
+  font-family: 'Inter';
+  font-size: 12px;
+  font-weight: 600;
+  color: #344054;
+}
+
+.selectedVendorChip {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 10px;
+  background: #EEF2FF;
+  border: 1px solid #C7D2FE;
+  border-radius: 14px;
+  font-family: 'Inter';
+  font-size: 12px;
+  font-weight: 500;
+  color: #1C33BB;
+}
+
+.selectedVendorChip button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  font-size: 15px;
+  line-height: 1;
+  color: #1C33BB;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.1s ease;
+}
+
+.selectedVendorChip button:hover {
+  color: #D92D20;
+}

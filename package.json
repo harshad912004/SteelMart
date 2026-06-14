@@ -1,0 +1,8 @@
+{
+     "name": "steelmart",
+     "version": "1.0.0",
+     "description": "Root project for running frontend and backend concurrently",
+     "scripts": {
+          "dev": "npx concurrently \"npm run dev --prefix Backend\" \"npm run dev --prefix Frontend\""
+     }
+}

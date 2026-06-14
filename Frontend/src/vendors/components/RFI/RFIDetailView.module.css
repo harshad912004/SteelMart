@@ -1,0 +1,414 @@
+/* ===== RFI Detail View ===== */
+
+.container {
+  font-family: 'Inter', sans-serif;
+  padding: 0;
+}
+
+.backButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: 1px solid #d0d5dd;
+  border-radius: 8px;
+  padding: 8px 14px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #344054;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: all 0.15s;
+  font-family: 'Inter', sans-serif;
+}
+
+.backButton:hover {
+  background: #f9fafb;
+  color: #1570ef;
+  border-color: #b2ddff;
+}
+
+/* ----- Top Section ----- */
+.topSection {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  gap: 16px;
+}
+
+.titleArea {
+  flex: 1;
+}
+
+.titleRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+
+.rfiTitle {
+  font-size: 20px;
+  font-weight: 700;
+  color: #101828;
+  margin: 0;
+}
+
+.viewIcon {
+  color: #667085;
+  cursor: pointer;
+  transition: color 0.15s;
+}
+
+.viewIcon:hover {
+  color: #1570ef;
+}
+
+.rfiCode {
+  font-size: 14px;
+  color: #667085;
+  margin: 0;
+}
+
+.topActions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.statusBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 14px;
+  border-radius: 16px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  border: 1.5px solid #22c55e;
+  background: #fff;
+  color: #16a34a;
+  font-family: 'Inter', sans-serif;
+  transition: all 0.15s;
+}
+
+.statusBadge:hover {
+  opacity: 0.85;
+}
+
+.deleteBtn {
+  background: none;
+  border: none;
+  padding: 6px;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #667085;
+  display: flex;
+  align-items: center;
+  transition: all 0.15s;
+}
+
+.deleteBtn:hover {
+  background: #fef3f2;
+  color: #d92d20;
+}
+
+/* ----- Description ----- */
+.description {
+  font-size: 14px;
+  color: #667085;
+  line-height: 1.7;
+  margin-bottom: 32px;
+  max-width: 720px;
+}
+
+/* ----- History Section ----- */
+.historySection {
+  margin-bottom: 24px;
+}
+
+.historyHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.historyTitle {
+  font-size: 16px;
+  font-weight: 700;
+  color: #101828;
+}
+
+.historyRight {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.ballInCourt {
+  text-align: right;
+}
+
+.ballInCourtName {
+  font-size: 14px;
+  font-weight: 600;
+  color: #101828;
+}
+
+.ballInCourtLabel {
+  font-size: 12px;
+  color: #667085;
+}
+
+.addHistoryBtn {
+  padding: 9px 18px;
+  border-radius: 8px;
+  border: none;
+  background: #1570ef;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: background 0.2s;
+  white-space: nowrap;
+}
+
+.addHistoryBtn:hover {
+  background: #1260cc;
+}
+
+/* ----- Inline Add Form ----- */
+.addForm {
+  background: #f9fafb;
+  border: 1px solid #e4e7ec;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.addFormTitle {
+  font-size: 15px;
+  font-weight: 600;
+  color: #101828;
+  margin-bottom: 16px;
+}
+
+.addFormGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.formField label {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  color: #344054;
+  margin-bottom: 6px;
+}
+
+.formTextarea {
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #d0d5dd;
+  font-size: 14px;
+  color: #101828;
+  font-family: 'Inter', sans-serif;
+  outline: none;
+  resize: vertical;
+  min-height: 100px;
+  box-sizing: border-box;
+  transition: border-color 0.2s;
+}
+
+.formTextarea:focus {
+  border-color: #1570ef;
+}
+
+.uploadBox {
+  border: 2px dashed #d0d5dd;
+  border-radius: 8px;
+  padding: 24px;
+  text-align: center;
+  background: #fff;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.uploadBox:hover {
+  border-color: #98a2b3;
+}
+
+.browseBtn {
+  display: inline-block;
+  padding: 8px 18px;
+  border-radius: 8px;
+  background: #1d2939;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  font-family: 'Inter', sans-serif;
+  margin-bottom: 6px;
+}
+
+.browseBtn:hover {
+  background: #101828;
+}
+
+.uploadHint {
+  font-size: 12px;
+  color: #667085;
+}
+
+.fileName {
+  font-size: 13px;
+  color: #1570ef;
+  margin-top: 8px;
+  font-weight: 500;
+}
+
+.addFormActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.cancelBtn {
+  padding: 9px 20px;
+  border-radius: 8px;
+  border: 1px solid #d0d5dd;
+  background: #fff;
+  color: #344054;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  transition: all 0.15s;
+}
+
+.cancelBtn:hover {
+  background: #f9fafb;
+}
+
+.submitBtn {
+  padding: 9px 20px;
+  border-radius: 8px;
+  border: none;
+  background: #1570ef;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  transition: background 0.2s;
+}
+
+.submitBtn:hover {
+  background: #1260cc;
+}
+
+/* ----- History Cards ----- */
+.historyList {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.historyCard {
+  display: flex;
+  gap: 14px;
+  padding: 18px 20px;
+  border-left: 3px solid #e4e7ec;
+  background: #fff;
+  transition: background 0.15s;
+}
+
+.historyCard:hover {
+  background: #f9fafb;
+}
+
+.historyCard:first-child {
+  border-left-color: #22c55e;
+}
+
+.historyDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-top: 5px;
+  flex-shrink: 0;
+}
+
+.dotGreen {
+  background: #22c55e;
+}
+
+.dotGray {
+  background: #d0d5dd;
+}
+
+.historyBody {
+  flex: 1;
+}
+
+.historyName {
+  font-size: 14px;
+  font-weight: 600;
+  color: #101828;
+}
+
+.historyCompany {
+  font-size: 13px;
+  color: #667085;
+  margin-left: 6px;
+}
+
+.historyText {
+  font-size: 13px;
+  color: #667085;
+  margin-top: 4px;
+  line-height: 1.5;
+}
+
+.historyMeta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.pdfBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  color: #d92d20;
+  background: #fef3f2;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+.historyTime {
+  font-size: 12px;
+  color: #98a2b3;
+}

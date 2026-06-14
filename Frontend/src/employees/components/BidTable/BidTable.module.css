@@ -1,0 +1,228 @@
+.tableRef {
+  width: 100%;
+  overflow-x: auto;
+  background: #FFFFFF;
+  border: 1px solid #E4E7EC;
+  border-radius: 16px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.table thead {
+  background: #FFFFFF;
+}
+
+.table thead th {
+  padding: 16px 24px;
+  text-align: left;
+  font-family: 'Inter';
+  font-weight: 600;
+  font-size: 13px;
+  color: #1D2939;
+  border-bottom: 1px solid #E4E7EC;
+}
+
+.table tbody tr {
+  background: #FFFFFF;
+  border-bottom: 1px solid #E4E7EC;
+  transition: background-color 0.2s;
+  cursor: pointer;
+}
+
+.table tbody tr:hover {
+  background-color: #F9FAFB;
+}
+
+.table tbody td {
+  padding: 16px 24px;
+  font-family: 'Inter';
+  font-size: 14px;
+  color: #475467;
+  border-bottom: 1px solid #E4E7EC;
+}
+
+.table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.emptyState {
+  text-align: center;
+  height: 120px;
+  color: #98A2B3;
+}
+
+.nameCell {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.projectName {
+  font-weight: 500;
+  color: #1D2939;
+  font-size: 14px;
+}
+
+.projectId {
+  font-size: 13px;
+  color: #98A2B3;
+  margin-top: 4px;
+}
+
+.statusBadge {
+  padding: 6px 12px;
+  border-radius: 16px;
+  font-size: 12px;
+  font-weight: 500;
+  display: inline-block;
+  text-transform: capitalize;
+  border: 1px solid transparent;
+  background: transparent;
+  font-family: 'Inter';
+}
+
+.statusCellWrap {
+  white-space: nowrap;
+}
+
+.statusExtra {
+  margin-right: 10px;
+}
+
+button.statusBadge {
+  cursor: default;
+}
+
+button.statusBadge:disabled {
+  opacity: 1;
+}
+
+.statusButton {
+  cursor: pointer;
+}
+
+.statusButton:hover {
+  background: #ECFDF3;
+}
+.statusCompleted {
+  color: #027A48;
+  border-color: #6EE7B7;
+  background: #ECFDF5;
+}
+
+.statusApproved {
+  color: #027A48;
+  border-color: #027A48;
+}
+
+.statusInProgress {
+  color: #F79009;
+  border-color: #F79009;
+}
+
+.statusClientRespond {
+  color: #475467;
+  border-color: #475467;
+}
+
+.statusCancelled {
+  color: #D92D20;
+  border-color: #D92D20;
+}
+
+.statusPending {
+  color: #F79009;
+  border-color: #F79009;
+}
+
+.statusOverdue {
+  color: #B42318;
+  border-color: #B42318;
+}
+
+.statusShared {
+  color: #1570EF;
+  border-color: #1570EF;
+}
+
+.statusDeleted {
+  color: #344054;
+  border-color: #344054;
+}
+
+.statusDefault {
+  color: #667085;
+  border-color: #667085;
+}
+
+
+
+.statusSentToClient {
+  color: #175CD3;
+  border-color: #84CAFF;
+  background: #EFF8FF;
+}
+
+.statusLost {
+  color: #B42318;
+  border-color: #FDA29B;
+  background: #FEF3F2;
+}
+
+.statusWon {
+  color: #B45309;
+  border-color: #FCD34D;
+  background: #FFFBEB;
+}
+
+.actionsCell {
+  text-align: right;
+}
+
+.actionsGroup {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.actionIconButton {
+  width: 36px;
+  height: 36px;
+  background: #FFFFFF;
+  border: 1px solid #EAECF0;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.actionIconButton:hover {
+  background-color: #F9FAFB;
+  border-color: #D0D5DD;
+  box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+}
+
+.actionIconButton:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  background-color: #F2F4F7;
+  border-color: #D0D5DD;
+}
+
+.actionIconButton:disabled:hover {
+  background-color: #F2F4F7;
+  border-color: #D0D5DD;
+  box-shadow: none;
+}
+
+.actionIconButton svg {
+  width: 20px;
+  height: 20px;
+  display: block;
+}

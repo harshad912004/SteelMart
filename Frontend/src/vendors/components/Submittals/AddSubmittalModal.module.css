@@ -1,0 +1,234 @@
+/* ========== Overlay ========== */
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ========== Modal card ========== */
+.modal {
+  width: 580px;
+  max-width: 94vw;
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.18);
+  font-family: 'Inter', sans-serif;
+  overflow: hidden;
+}
+
+/* ─── Header ─── */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px;
+  border-bottom: 1px solid #e4e7ec;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #101828;
+  margin: 0;
+}
+
+.closeBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: transparent;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #667085;
+  transition: background 0.15s, color 0.15s;
+}
+
+.closeBtn:hover {
+  background: #f2f4f7;
+  color: #344054;
+}
+
+/* ─── Body / form ─── */
+form {
+  padding: 24px;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px 20px;
+  margin-bottom: 22px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.formGroup label {
+  font-size: 13px;
+  font-weight: 500;
+  color: #344054;
+}
+
+.formGroup input,
+.formGroup select {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #d0d5dd;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #101828;
+  font-family: 'Inter', sans-serif;
+  background: #ffffff;
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.2s;
+}
+
+.formGroup input::placeholder {
+  color: #98a2b3;
+}
+
+.formGroup input:focus,
+.formGroup select:focus {
+  border-color: #1570ef;
+}
+
+.formGroup select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%23667085' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  padding-right: 34px;
+  cursor: pointer;
+}
+
+/* ─── Date picker ─── */
+.dateWrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.dateWrap input {
+  width: 100%;
+  padding: 10px 14px;
+  padding-right: 38px;
+  border: 1px solid #d0d5dd;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #101828;
+  font-family: 'Inter', sans-serif;
+  background: #ffffff;
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.2s;
+}
+
+.dateWrap input:focus {
+  border-color: #1570ef;
+}
+
+.dateIcon {
+  position: absolute;
+  right: 12px;
+  color: #98a2b3;
+  cursor: pointer;
+}
+
+/* ─── Upload section ─── */
+.uploadSection {
+  margin-bottom: 24px;
+}
+
+.uploadSection > label {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  color: #344054;
+  margin-bottom: 8px;
+}
+
+.dropzone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 2px dashed #d0d5dd;
+  border-radius: 8px;
+  padding: 28px 16px;
+  text-align: center;
+}
+
+.browseBtn {
+  padding: 8px 20px;
+  border: none;
+  border-radius: 8px;
+  background: #1d2939;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  transition: background 0.15s;
+}
+
+.browseBtn:hover {
+  background: #101828;
+}
+
+.dropzoneText {
+  font-size: 13px;
+  color: #98a2b3;
+}
+
+/* ─── Action buttons ─── */
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.cancelBtn {
+  padding: 10px 22px;
+  border: 1px solid #d0d5dd;
+  border-radius: 8px;
+  background: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+  color: #344054;
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.cancelBtn:hover {
+  background: #f2f4f7;
+}
+
+.createBtn {
+  padding: 10px 22px;
+  border: none;
+  border-radius: 8px;
+  background: #1570ef;
+  font-size: 14px;
+  font-weight: 500;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.createBtn:hover {
+  background: #1259c4;
+}

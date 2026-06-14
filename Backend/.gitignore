@@ -1,0 +1,8 @@
+.env
+node_modules
+logFiles/
+git_commands.txt
+uploads/
+config/steelmart_create.sql
+config/steelmart_export.sql
+package-lock.json

@@ -1,0 +1,261 @@
+.container {
+  width: 100%;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+}
+
+.heading {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  letter-spacing: 0.02em;
+  color: #1570EF;
+  margin: -80px 0 0 0;
+}
+
+.subheading {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0.01em;
+  color: #212121;
+  margin: 0 0 16px;
+  text-align: center;
+}
+
+/* ── Form ── */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* ── Field group ── */
+.fieldGroup {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 24px;
+}
+
+.label {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.02em;
+  color: #000000;
+  margin-bottom: 8px;
+}
+
+.input {
+  width: 100%;
+  height: 56px;
+  background: #FFFFFF;
+  border: 1px solid #EEEEEE;
+  border-radius: 6px;
+  padding: 0 24px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.02em;
+  color: #000000;
+  outline: none;
+  transition: border-color 0.18s, box-shadow 0.18s;
+}
+
+/* Hide the native password reveal button in Edge */
+input[type="password"]::-ms-reveal {
+  display: none;
+}
+
+
+.input::placeholder {
+  color: #AFAFAF;
+}
+
+.input:focus {
+  border-color: #1570EF;
+  box-shadow: 0 0 0 3px rgba(21, 112, 239, 0.1);
+}
+
+.input.inputErr {
+  border-color: #ef4444;
+}
+
+/* ── Password wrapper (input + eye icon) ── */
+.passwordWrapper {
+  width: 100%;
+  height: 56px;
+  background: #FFFFFF;
+  border: 1px solid #EEEEEE;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  padding: 0 16px 0 24px;
+  transition: border-color 0.18s, box-shadow 0.18s;
+}
+
+.passwordWrapper:focus-within {
+  border-color: #1570EF;
+  box-shadow: 0 0 0 3px rgba(21, 112, 239, 0.1);
+}
+
+.passwordWrapper.inputErr {
+  border-color: #ef4444;
+}
+
+.passwordInput {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.02em;
+  color: #000000;
+}
+
+.passwordInput::placeholder {
+  color: #AFAFAF;
+}
+
+/* Eye toggle button — spec: 24×24, #AFAFAF icon */
+.eyeBtn {
+  flex-shrink: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  margin-left: 8px;
+  transition: opacity 0.15s;
+}
+
+.eyeBtn:hover {
+  opacity: 0.7;
+}
+
+/* Error message */
+.errorMsg {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  color: #ef4444;
+  font-weight: 400;
+  margin-top: 5px;
+}
+
+.loginBtn {
+  width: 100%;
+  height: 48px;
+  background: #1570EF;
+  border: none;
+  border-radius: 56px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.02em;
+  color: #FFFFFF;
+  cursor: pointer;
+  margin-top: 52px;
+  transition: background 0.2s, box-shadow 0.2s, transform 0.15s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.loginBtn:hover:not(:disabled) {
+  background: #1254c4;
+  box-shadow: 0 6px 24px rgba(21, 112, 239, 0.35);
+  transform: translateY(-1px);
+}
+
+.loginBtn:active:not(:disabled) {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(21, 112, 239, 0.2);
+}
+
+.loginBtn:disabled {
+  cursor: not-allowed;
+  opacity: 0.85;
+}
+
+/* Loading spinner */
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 2.5px solid rgba(255, 255, 255, 0.35);
+  border-top-color: #ffffff;
+  border-radius: 50%;
+  animation: spin 0.65s linear infinite;
+}
+
+.footer {
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  padding: 0 48px;
+}
+
+.forgotLink {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.02em;
+  text-align: center;
+  text-decoration: underline;
+  color: #263238;
+  transition: color 0.15s;
+}
+
+.forgotLink:hover {
+  color: #1570EF;
+}
+
+/* ── Animation ── */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .heading {
+    font-size: 20px;
+    margin-bottom: 28px;
+  }
+
+  .label {
+    font-size: 16px;
+  }
+
+  .input,
+  .passwordInput {
+    font-size: 16px;
+  }
+
+  .loginBtn {
+    margin-top: 32px;
+  }
+
+  .footer {
+    padding-top: 40px;
+  }
+}

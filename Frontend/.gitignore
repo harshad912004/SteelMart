@@ -1,0 +1,40 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# images
+Images/
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# Vite
+/.vite/
+/dist/
+
+# production
+/build
+
+# testing
+/coverage
+
+# environment variables
+.env
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# misc
+.DS_Store
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.eslintcache
+
+# OS
+Thumbs.db

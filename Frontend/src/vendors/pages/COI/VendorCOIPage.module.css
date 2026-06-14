@@ -1,0 +1,242 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #ffffff;
+  font-family: 'Inter', sans-serif;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  padding: 16px 24px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.brandLogo {
+  height: 32px;
+  margin-right: 24px;
+}
+
+.backButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: 1px solid #e5e7eb;
+  border-radius: 4px;
+  background: white;
+  cursor: pointer;
+  color: #374151;
+}
+
+.backButton:hover {
+  background-color: #f9fafb;
+}
+
+.mainContent {
+  display: flex;
+  flex: 1;
+}
+
+.sidebar {
+  width: 280px;
+  border-right: 1px solid #e5e7eb;
+  padding: 32px 24px;
+}
+
+.sidebarSection {
+  margin-bottom: 32px;
+}
+
+.sidebarTitle {
+  font-size: 16px;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 12px;
+}
+
+.sidebarText {
+  font-size: 14px;
+  color: #6b7280;
+  line-height: 1.6;
+  margin-bottom: 4px;
+}
+
+.contentArea {
+  flex: 1;
+  padding: 32px 48px;
+  background-color: #fafafa;
+}
+
+.alertRed {
+  border: 1px solid #ef4444;
+  color: #ef4444;
+  background-color: #fff;
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  font-size: 14px;
+}
+
+.alertOrange {
+  border: 1px solid #f59e0b;
+  color: #f59e0b;
+  background-color: #fff;
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  font-size: 14px;
+}
+
+.pageTitle {
+  font-size: 24px;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 24px;
+}
+
+.projectTitle {
+  font-size: 20px;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 4px;
+}
+
+.projectCode {
+  font-size: 14px;
+  color: #9ca3af;
+  margin-bottom: 24px;
+}
+
+.card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 32px;
+}
+
+.infoList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 32px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.infoRow {
+  font-size: 15px;
+  color: #4b5563;
+}
+
+.infoLabel {
+  font-weight: 600;
+  color: #374151;
+  margin-right: 4px;
+}
+
+.formGroup {
+  margin-bottom: 24px;
+}
+
+.label {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 8px;
+}
+
+.input {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #111827;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+.uploadBox {
+  border: 1px dashed #d1d5db;
+  border-radius: 8px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 400px;
+  background-color: #fafafa;
+}
+
+.uploadText {
+  margin-top: 12px;
+  font-size: 14px;
+  color: #4b5563;
+}
+
+.uploadLink {
+  color: #2563eb;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.uploadSubtext {
+  font-size: 12px;
+  color: #9ca3af;
+  margin-top: 4px;
+}
+
+.submitBtn {
+  background-color: #2563eb;
+  color: white;
+  padding: 10px 32px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  margin-top: 16px;
+  min-width: 140px;
+}
+
+.submitBtn:hover {
+  background-color: #1d4ed8;
+}
+
+.fileActions {
+  display: flex;
+  gap: 16px;
+  margin-top: 12px;
+}
+
+.fileActionCard {
+  border: 1px solid #2563eb;
+  border-radius: 8px;
+  padding: 16px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #2563eb;
+  background-color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  min-width: 120px;
+}
+
+.fileActionCard:hover {
+  background-color: #eff6ff;
+}
+
+.fileActionIcon {
+  margin-bottom: 8px;
+}
