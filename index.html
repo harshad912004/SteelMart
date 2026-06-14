@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="refresh" content="0; url=http://localhost:5173/employee/login">
+     <meta name="description"
+          content="SteelMart - A comprehensive B2B platform for steel manufacturing and distribution">
+     <meta name="keywords" content="SteelMart, steel, manufacturing, B2B, bidding, procurement">
+     <meta name="author" content="Harshad">
+     <title>SteelMart - B2B Steel Platform</title>
+     <style>
+          * {
+               margin: 0;
+               padding: 0;
+               box-sizing: border-box;
+          }
+
+          body {
+               font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+               line-height: 1.6;
+               color: #333;
+               background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+               min-height: 100vh;
+          }
+
+          .container {
+               max-width: 1200px;
+               margin: 0 auto;
+               padding: 0 20px;
+          }
+
+          header {
+               background: rgba(0, 0, 0, 0.1);
+               padding: 40px 0;
+               text-align: center;
+               color: white;
+               backdrop-filter: blur(10px);
+               box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+          }
+
+          header h1 {
+               font-size: 3em;
+               margin-bottom: 10px;
+               text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+          }
+
+          header p {
+               font-size: 1.2em;
+               opacity: 0.95;
+          }
+
+          main {
+               margin: 40px 0;
+          }
+
+          section {
+               background: white;
+               margin: 30px 0;
+               padding: 40px;
+               border-radius: 10px;
+               box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+               animation: slideIn 0.5s ease-out;
+          }
+
+          @keyframes slideIn {
+               from {
+                    opacity: 0;
+                    transform: translateY(20px);
+               }
+
+               to {
+                    opacity: 1;
+                    transform: translateY(0);
+               }
+          }
+
+          section h2 {
+               color: #667eea;
+               margin-bottom: 20px;
+               font-size: 2em;
+               border-bottom: 3px solid #667eea;
+               padding-bottom: 10px;
+          }
+
+          section h3 {
+               color: #764ba2;
+               margin-top: 20px;
+               margin-bottom: 10px;
+               font-size: 1.3em;
+          }
+
+          .feature-grid {
+               display: grid;
+               grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+               gap: 20px;
+               margin: 20px 0;
+          }
+
+          .feature-card {
+               background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+               color: white;
+               padding: 20px;
+               border-radius: 8px;
+               text-align: center;
+               transition: transform 0.3s ease;
+          }
+
+          .feature-card:hover {
+               transform: translateY(-5px);
+          }
+
+          .feature-card h4 {
+               margin-bottom: 10px;
+               font-size: 1.1em;
+          }
+
+          code {
+               background: #f5f5f5;
+               padding: 2px 6px;
+               border-radius: 4px;
+               font-family: 'Courier New', monospace;
+               color: #d63384;
+               font-weight: 500;
+          }
+
+          pre {
+               background: #1e1e1e;
+               color: #00ff00;
+               padding: 15px;
+               border-radius: 8px;
+               overflow-x: auto;
+               margin: 15px 0;
+               font-family: 'Courier New', monospace;
+               font-size: 0.95em;
+          }
+
+          ul,
+          ol {
+               margin-left: 20px;
+               margin-bottom: 15px;
+          }
+
+          li {
+               margin-bottom: 8px;
+          }
+
+          .button-group {
+               display: flex;
+               gap: 15px;
+               margin: 30px 0;
+               flex-wrap: wrap;
+          }
+
+          a.btn {
+               display: inline-block;
+               padding: 12px 30px;
+               background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+               color: white;
+               text-decoration: none;
+               border-radius: 5px;
+               transition: transform 0.3s, box-shadow 0.3s;
+               font-weight: 600;
+               box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+          }
+
+          a.btn:hover {
+               transform: translateY(-2px);
+               box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+          }
+
+          .tech-stack {
+               display: grid;
+               grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+               gap: 15px;
+               margin: 20px 0;
+          }
+
+          .tech-item {
+               background: #f0f0f0;
+               padding: 15px;
+               border-radius: 8px;
+               text-align: center;
+               border-left: 4px solid #667eea;
+          }
+
+          .tech-item strong {
+               color: #667eea;
+          }
+
+          .requirements {
+               background: #f9f3cd;
+               border-left: 4px solid #ff9800;
+               padding: 15px;
+               border-radius: 5px;
+               margin: 15px 0;
+          }
+
+          .note {
+               background: #e7f3ff;
+               border-left: 4px solid #2196f3;
+               padding: 15px;
+               border-radius: 5px;
+               margin: 15px 0;
+          }
+
+          footer {
+               background: rgba(0, 0, 0, 0.2);
+               color: white;
+               text-align: center;
+               padding: 30px 0;
+               margin-top: 50px;
+               border-top: 1px solid rgba(255, 255, 255, 0.2);
+          }
+
+          footer p {
+               margin: 5px 0;
+          }
+
+          .github-link {
+               display: inline-block;
+               margin-top: 20px;
+          }
+
+          table {
+               width: 100%;
+               border-collapse: collapse;
+               margin: 15px 0;
+          }
+
+          table th,
+          table td {
+               border: 1px solid #ddd;
+               padding: 12px;
+               text-align: left;
+          }
+
+          table th {
+               background: #667eea;
+               color: white;
+          }
+
+          table tr:nth-child(even) {
+               background: #f9f9f9;
+          }
+
+          .status-badge {
+               display: inline-block;
+               padding: 5px 10px;
+               background: #4caf50;
+               color: white;
+               border-radius: 20px;
+               font-size: 0.9em;
+               font-weight: 600;
+          }
+
+          .responsive-img {
+               max-width: 100%;
+               height: auto;
+               border-radius: 8px;
+               margin: 15px 0;
+          }
+
+          @media (max-width: 768px) {
+               header h1 {
+                    font-size: 2em;
+               }
+
+               section {
+                    padding: 20px;
+               }
+
+               .feature-grid {
+                    grid-template-columns: 1fr;
+               }
+
+               .button-group {
+                    flex-direction: column;
+               }
+
+               a.btn {
+                    width: 100%;
+                    text-align: center;
+               }
+          }
+     </style>
+</head>
+
+<body>
+     <header>
+          <div class="container">
+               <h1>🏢 SteelMart</h1>
+               <p>A Comprehensive B2B Platform for Steel Manufacturing & Distribution</p>
+          </div>
+     </header>
+
+     <main class="container">
+          <!-- Project Overview -->
+          <section>
+               <h2>📋 Project Overview</h2>
+               <p>
+                    <strong>SteelMart</strong> is a full-stack B2B platform designed to streamline steel manufacturing
+                    and distribution processes. It provides a modern solution for managing bids, proposals, and vendor
+                    relationships with comprehensive reporting and analytics capabilities.
+               </p>
+               <p style="margin-top: 15px;">
+                    The platform features separate interfaces for employees and vendors, enabling seamless collaboration
+                    and efficient project management in the steel industry.
+               </p>
+               <div class="status-badge">🟢 Active Development</div>
+          </section>
+
+          <!-- Key Features -->
+          <section>
+               <h2>✨ Key Features</h2>
+               <div class="feature-grid">
+                    <div class="feature-card">
+                         <h4>📊 Bid Management</h4>
+                         <p>Create, track, and manage comprehensive bids with detailed cost breakdowns</p>
+                    </div>
+                    <div class="feature-card">
+                         <h4>👥 User Roles</h4>
+                         <p>Separate portals for employees and vendors with role-based access control</p>
+                    </div>
+                    <div class="feature-card">
+                         <h4>📁 Project Gallery</h4>
+                         <p>Organized project documentation with file management capabilities</p>
+                    </div>
+                    <div class="feature-card">
+                         <h4>💬 RFI & Submittals</h4>
+                         <p>Request for Information and submittal tracking systems</p>
+                    </div>
+                    <div class="feature-card">
+                         <h4>📈 Analytics & Reports</h4>
+                         <p>Comprehensive reporting and financial analytics dashboard</p>
+                    </div>
+                    <div class="feature-card">
+                         <h4>🔐 Secure Authentication</h4>
+                         <p>JWT-based authentication with role-based access control</p>
+                    </div>
+               </div>
+          </section>
+
+          <!-- Tech Stack -->
+          <section>
+               <h2>🛠️ Technology Stack</h2>
+
+               <h3>Frontend</h3>
+               <div class="tech-stack">
+                    <div class="tech-item">
+                         <strong>React</strong>
+                         <p>19.2.6</p>
+                    </div>
+                    <div class="tech-item">
+                         <strong>Vite</strong>
+                         <p>8.0.10</p>
+                    </div>
+                    <div class="tech-item">
+                         <strong>React Router</strong>
+                         <p>7.14.1</p>
+                    </div>
+                    <div class="tech-item">
+                         <strong>FullCalendar</strong>
+                         <p>6.1.20</p>
+                    </div>
+               </div>
+
+               <h3>Backend</h3>
+               <div class="tech-stack">
+                    <div class="tech-item">
+                         <strong>Node.js</strong>
+                         <p>Runtime</p>
+                    </div>
+                    <div class="tech-item">
+                         <strong>Express.js</strong>
+                         <p>5.2.1</p>
+                    </div>
+                    <div class="tech-item">
+                         <strong>MySQL</strong>
+                         <p>Database</p>
+                    </div>
+                    <div class="tech-item">
+                         <strong>JWT</strong>
+                         <p>Authentication</p>
+                    </div>
+               </div>
+
+               <h3>Development Tools</h3>
+               <div class="tech-stack">
+                    <div class="tech-item">
+                         <strong>Nodemon</strong>
+                         <p>Hot Reload</p>
+                    </div>
+                    <div class="tech-item">
+                         <strong>Concurrently</strong>
+                         <p>Multi-process</p>
+                    </div>
+                    <div class="tech-item">
+                         <strong>npm Workspaces</strong>
+                         <p>Monorepo</p>
+                    </div>
+               </div>
+          </section>
+
+          <!-- Requirements -->
+          <section>
+               <h2>📦 Requirements</h2>
+               <div class="requirements">
+                    <strong>⚠️ Before you start, ensure you have:</strong>
+               </div>
+               <ul>
+                    <li><strong>Node.js</strong> (v14 or higher) - <a href="https://nodejs.org/"
+                              target="_blank">Download</a></li>
+                    <li><strong>npm</strong> (v6 or higher) - Comes with Node.js</li>
+                    <li><strong>MySQL</strong> (v5.7 or higher) - <a href="https://www.mysql.com/downloads/"
+                              target="_blank">Download</a></li>
+                    <li><strong>Git</strong> - <a href="https://git-scm.com/" target="_blank">Download</a></li>
+               </ul>
+          </section>
+
+          <!-- Installation & Setup -->
+          <section>
+               <h2>🚀 Installation & Setup</h2>
+
+               <h3>Step 1: Clone the Repository</h3>
+               <pre><code>git clone https://github.com/harshad912004/SteelMart.git
+cd SteelMart</code></pre>
+
+               <h3>Step 2: Install Dependencies</h3>
+               <pre><code>npm install</code></pre>
+               <p>This will install all dependencies for both frontend and backend using npm workspaces.</p>
+
+               <h3>Step 3: Environment Configuration</h3>
+
+               <h4>Backend .env Setup</h4>
+               <p>Create a <code>.env</code> file in the <code>Backend</code> folder:</p>
+               <pre><code>DB_DRIVER=mysql
+DB_HOST=localhost
+DB_PORT=3306
+DB_USER=root
+DB_PASSWORD=your_password
+DB_DATABASE=steelmart
+PORT=3000
+APP_HOST=0.0.0.0
+JWT_SECRET_KEY=your_jwt_secret_key_here
+EMAIL_SERVICE=gmail
+EMAIL_USER=your_email@gmail.com
+EMAIL_PASSWORD=your_app_password
+CORS_ALLOWED_ORIGINS=http://localhost:5173,http://localhost:3000</code></pre>
+
+               <h4>Frontend .env Setup</h4>
+               <p>Create a <code>.env</code> file in the <code>Frontend</code> folder:</p>
+               <pre><code>VITE_API_URL=http://localhost:5000
+APP_HOST=0.0.0.0</code></pre>
+
+               <h3>Step 4: Database Setup</h3>
+               <p>Create MySQL database and import the schema:</p>
+               <pre><code>mysql -u root -p steelmart < Backend/config/steelmart_create.sql</code></pre>
+
+               <h3>Step 5: Run the Application</h3>
+               <p>From the root directory, start both backend and frontend:</p>
+               <pre><code>npm run dev</code></pre>
+
+               <div class="note">
+                    <strong>💡 What this does:</strong>
+                    <ul style="margin-top: 10px;">
+                         <li>Starts the Backend server on <code>http://localhost:3000</code></li>
+                         <li>Starts the Frontend application on <code>http://localhost:5173</code></li>
+                    </ul>
+               </div>
+
+               <h3>Alternative: Run Frontend & Backend Separately</h3>
+               <pre><code># Terminal 1 - Backend
+cd Backend
+npm run dev
+
+# Terminal 2 - Frontend
+cd Frontend
+npm run dev</code></pre>
+          </section>
+
+          <!-- Project Structure -->
+          <section>
+               <h2>📁 Project Structure</h2>
+               <pre><code>SteelMart/
+├── Frontend/                    # React + Vite application
+│   ├── src/
+│   │   ├── common/             # Shared components & utilities
+│   │   ├── employees/          # Employee portal
+│   │   ├── vendors/            # Vendor portal
+│   │   └── App.jsx
+│   └── package.json
+├── Backend/                     # Node.js + Express API
+│   ├── employee/               # Employee routes & controllers
+│   │   ├── controllers/
+│   │   ├── models/
+│   │   ├── routes/
+│   │   └── middlewares/
+│   ├── vendor/                 # Vendor routes & controllers
+│   │   ├── controllers/
+│   │   ├── models/
+│   │   ├── routes/
+│   │   └── middlewares/
+│   ├── common/                 # Shared utilities
+│   │   ├── middlewares/
+│   │   ├── services/
+│   │   └── utils/
+│   ├── config/                 # Database configuration
+│   ├── app.js                  # Express app setup
+│   └── package.json
+├── package.json                # Root package with workspaces
+└── README.md</code></pre>
+          </section>
+
+          <!-- API Documentation -->
+          <section>
+               <h2>🔌 API Endpoints Overview</h2>
+               <table>
+                    <tr>
+                         <th>Category</th>
+                         <th>Endpoint</th>
+                         <th>Method</th>
+                         <th>Description</th>
+                    </tr>
+                    <tr>
+                         <td>Authentication</td>
+                         <td>/api/auth/login</td>
+                         <td>POST</td>
+                         <td>User login</td>
+                    </tr>
+                    <tr>
+                         <td>Authentication</td>
+                         <td>/api/auth/register</td>
+                         <td>POST</td>
+                         <td>User registration</td>
+                    </tr>
+                    <tr>
+                         <td>Bids</td>
+                         <td>/api/bids</td>
+                         <td>GET</td>
+                         <td>List all bids</td>
+                    </tr>
+                    <tr>
+                         <td>Bids</td>
+                         <td>/api/bids/create</td>
+                         <td>POST</td>
+                         <td>Create new bid</td>
+                    </tr>
+                    <tr>
+                         <td>Projects</td>
+                         <td>/api/projects</td>
+                         <td>GET</td>
+                         <td>List all projects</td>
+                    </tr>
+                    <tr>
+                         <td>Vendors</td>
+                         <td>/api/vendors</td>
+                         <td>GET</td>
+                         <td>List all vendors</td>
+                    </tr>
+                    <tr>
+                         <td>RFI</td>
+                         <td>/api/rfi</td>
+                         <td>GET/POST</td>
+                         <td>Manage RFIs</td>
+                    </tr>
+                    <tr>
+                         <td>Submittals</td>
+                         <td>/api/submittals</td>
+                         <td>GET/POST</td>
+                         <td>Manage submittals</td>
+                    </tr>
+               </table>
+          </section>
+
+          <!-- Available Scripts -->
+          <section>
+               <h2>📝 Available Scripts</h2>
+               <table>
+                    <tr>
+                         <th>Command</th>
+                         <th>Description</th>
+                    </tr>
+                    <tr>
+                         <td><code>npm run dev</code></td>
+                         <td>Start both frontend and backend in development mode</td>
+                    </tr>
+                    <tr>
+                         <td><code>npm run frontend</code></td>
+                         <td>Start frontend development server only</td>
+                    </tr>
+                    <tr>
+                         <td><code>npm run backend</code></td>
+                         <td>Start backend development server only</td>
+                    </tr>
+                    <tr>
+                         <td><code>npm run install-all</code></td>
+                         <td>Install dependencies for all workspaces</td>
+                    </tr>
+                    <tr>
+                         <td><code>npm --workspace Frontend run build</code></td>
+                         <td>Build frontend for production</td>
+                    </tr>
+               </table>
+          </section>
+
+          <!-- Troubleshooting -->
+          <section>
+               <h2>🔧 Troubleshooting</h2>
+
+               <h3>Port Already in Use</h3>
+               <p>If port 5000 or 5173 is already in use:</p>
+               <ul>
+                    <li>Change the port in backend <code>.env</code> file</li>
+                    <li>Update frontend's API URL to match the new backend port</li>
+               </ul>
+
+               <h3>Database Connection Error</h3>
+               <ul>
+                    <li>Verify MySQL is running</li>
+                    <li>Check credentials in <code>.env</code> file</li>
+                    <li>Ensure database <code>steelmart</code> is created</li>
+               </ul>
+
+               <h3>Dependencies Not Installed</h3>
+               <p>Clear cache and reinstall:</p>
+               <pre><code>npm cache clean --force
+npm install</code></pre>
+
+               <h3>Module Not Found Errors</h3>
+               <p>Ensure all dependencies are installed:</p>
+               <pre><code>npm run install-all</code></pre>
+          </section>
+
+          <!-- Contributing -->
+          <section>
+               <h2>🤝 Contributing</h2>
+               <p>Contributions are welcome! Please feel free to submit a Pull Request.</p>
+               <ol>
+                    <li>Fork the repository</li>
+                    <li>Create your feature branch (<code>git checkout -b feature/AmazingFeature</code>)</li>
+                    <li>Commit your changes (<code>git commit -m 'Add some AmazingFeature'</code>)</li>
+                    <li>Push to the branch (<code>git push origin feature/AmazingFeature</code>)</li>
+                    <li>Open a Pull Request</li>
+               </ol>
+          </section>
+
+          <!-- License & Contact -->
+          <section>
+               <h2>📄 License & Contact</h2>
+               <p><strong>License:</strong> ISC</p>
+               <p><strong>Author:</strong> Harshad</p>
+               <p><strong>Repository:</strong> <a href="https://github.com/harshad912004/SteelMart"
+                         target="_blank">github.com/harshad912004/SteelMart</a></p>
+
+               <div class="button-group">
+                    <a href="https://github.com/harshad912004/SteelMart" class="btn" target="_blank">🔗 View on
+                         GitHub</a>
+                    <a href="https://github.com/harshad912004/SteelMart/issues" class="btn" target="_blank">📝 Report
+                         Issues</a>
+               </div>
+          </section>
+     </main>
+
+     <footer>
+          <div class="container">
+               <p><strong>SteelMart</strong> - B2B Steel Manufacturing & Distribution Platform</p>
+               <p>Built with ❤️ using React, Node.js, and MySQL</p>
+               <p>&copy; 2024 SteelMart. All rights reserved.</p>
+               <p>
+                    <a href="https://github.com/harshad912004" style="color: #fff; text-decoration: none;">
+                         GitHub Profile
+                    </a>
+               </p>
+          </div>
+     </footer>
+</body>
+
+</html>
